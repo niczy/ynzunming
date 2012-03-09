@@ -1,13 +1,17 @@
-import tornado.ioloop
-import tornado.web
+import tornado.ioloop 
+import tornado.web 
+from tornado import web
 
-class MainHandler(tornado.web.RequestHandler):
+class MainHandler(tornado.web.RequestHandler): 
     def get(self):
-        self.write("Hello, world")
+        self.render('index.html')
 
 application = tornado.web.Application([
     (r"/", MainHandler),
-])
+    (r"/static/(.*)", web.StaticFileHandler, {"path": "./static/"})
+], template_path = "./template")
+
+print application.settings.get("template_path")
 
 if __name__ == "__main__":
     application.listen(19898)
