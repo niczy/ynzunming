@@ -12,4 +12,8 @@ class AboutHandler(web.RequestHandler):
     def get(self):
         self.render("about.html");
 
+class FavHandler(web.RequestHandler):
+    def get(self):
+        self.redirect("/static/image/icon_small.png")
+
 
