@@ -1,17 +1,12 @@
 import tornado.ioloop 
 import tornado.web 
 from tornado import web
-
-class MainHandler(tornado.web.RequestHandler): 
-    def get(self):
-        self.render('index.html')
-
-class FeedHandler(web.RequestHandler):
-    def get(self):
-        self.render('feed.html')
+from controller import handlers
 
 application = tornado.web.Application([
-	(r"/", MainHandler),
+	(r"/", handlers.MainHandler),
+    (r"/about", handlers.AboutHandler),
+    (r"/job", handlers.JobHandler),
 	(r"/static/(.*)", web.StaticFileHandler, {"path": "./static/"})
 ], template_path = "./template", debug=True)
 
