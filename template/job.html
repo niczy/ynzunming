@@ -1,39 +1,10 @@
-<!DOCTYPE html>
-<head>
-<meta charset="utf-8">
-
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>遵明投资担保</title>
-<link href="static/css/bootstrap.css" rel="stylesheet">
-<link href="static/css/bootstrap-responsive.css" rel="stylesheet">
-<link href="static/css/ynzunming.css" rel="stylesheet">
-</head>
-<body>
-
-<div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/">云南遵明投资担保</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-
-              <li><a href="/">首页</a></li>
+{% extends "base.html" %}
+{% block nav%}
+<li><a href="/">首页</a></li>
               <li><a href="/about">公司简介</a></li>
               <li class="active"><a href="/job">招聘</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
+{% end %}
+{% block content %}
         <div class="row-fluid">
             <div class="span12 landing_logo">
                 <img src="static/image/landing_logo.png"/>
@@ -69,30 +40,7 @@
                 </div>
 
             </div>
-
-
         </div>
       
-    </div><!--/.fluid-container-->
-    
-    <!-- Le javascript
-    ================================================== -->
-
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="static/js/bootstrapjs/jquery.js"></script>
-    <script src="static/js/bootstrapjs/bootstrap-transition.js"></script>
-    <script src="static/js/bootstrapjs/bootstrap-alert.js"></script>
-    <script src="static/js/bootstrapjs/bootstrap-modal.js"></script>
-    <script src="static/js/bootstrapjs/bootstrap-dropdown.js"></script>
-
-    <script src="static/js/bootstrapjs/bootstrap-scrollspy.js"></script>
-    <script src="static/js/bootstrapjs/bootstrap-tab.js"></script>
-    <script src="static/js/bootstrapjs/bootstrap-tooltip.js"></script>
-    <script src="static/js/bootstrapjs/bootstrap-popover.js"></script>
-    <script src="static/js/bootstrapjs/bootstrap-button.js"></script>
-    <script src="static/js/bootstrapjs/bootstrap-collapse.js"></script>
-
-    <script src="static/js/bootstrapjs/bootstrap-carousel.js"></script>
-    <script src="static/js/bootstrapjs/bootstrap-typeahead.js"></script>
-</body>
+{% end %}
 
