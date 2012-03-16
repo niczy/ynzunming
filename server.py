@@ -9,7 +9,7 @@ application = tornado.web.Application([
     (r"/job", handlers.JobHandler),
     (r"/favicon.ico", handlers.FavHandler),
 	(r"/static/(.*)", web.StaticFileHandler, {"path": "./static/"})
-], template_path = "./template", debug=True)
+], template_path = "./template")
 
 print application.settings.get("template_path")
 
