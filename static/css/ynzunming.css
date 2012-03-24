@@ -37,3 +37,8 @@ ol {
 
 }
 
+.home {
+    background-image:url('/static/image/home_content.png');
+    background-repeat:no-repeat;
+}
+
