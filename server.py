@@ -7,6 +7,10 @@ application = tornado.web.Application([
 	(r"/", handlers.MainHandler),
     (r"/about", handlers.AboutHandler),
     (r"/job", handlers.JobHandler),
+    (r"/business", handlers.BusinessHandler),
+    (r"/example", handlers.ExampleHandler),
+    (r"/contact", handlers.ContactHandler),
+    (r"/links", handlers.LinkHandler),
     (r"/favicon.ico", handlers.FavHandler),
 	(r"/static/(.*)", web.StaticFileHandler, {"path": "./static/"})
 ], template_path = "./template", debug=True)

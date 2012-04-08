@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="head_logo">
+        <img src="static/image/logo_long.png" />
+    </div>
+
+        <div class="row-fluid">
+            <div class="span2">
+                    {% include "nav.html"%}
+            </div>
+            <div class="span10">
+            {% block inner_content%}
+            {% end %}
+            </div>
+            </div>
+        </div>
+{% end %}
+
+
