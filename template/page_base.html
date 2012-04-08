@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="head_logo">
+    <div class="head_logo row offset3">
         <img src="static/image/logo_long.png" />
     </div>
 
-        <div class="row-fluid">
-            <div class="span2">
+        <div class="row">
+            <div class="span2 offset1">
                     {% include "nav.html"%}
             </div>
-            <div class="span10">
+            <div class="span8">
             {% block inner_content%}
             {% end %}
             </div>
